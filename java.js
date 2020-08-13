@@ -5,4 +5,4 @@ var simple=function(){
    return textMultiple;
 }
 
-var ip_address = $_SERVER["REMOTE_ADDR"];
+//var ip_address = $_SERVER["REMOTE_ADDR"];
