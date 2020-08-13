@@ -5,4 +5,4 @@ var simple=function(){
    return textMultiple;
 }
 
-var ip_address = HttpRequest.ServerVariables["REMOTE_ADDR"];
+var ip_address = "this is not updating" //HttpRequest.ServerVariables["REMOTE_ADDR"];
