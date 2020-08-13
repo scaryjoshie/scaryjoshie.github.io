@@ -6,14 +6,14 @@
         if (answer) {}
         else {window.close()}
 
-        function myFunction() {
-        document.getElementById("myText").innerHTML = ip_address;
-    }
+        //function myFunction() {
+        //document.getElementById("myText").innerHTML = ip_address;
+    //}
     </script>
 </html>
 
     <!-- Text-->
 <body onload = "myFunction" style="font-family:Courier New" >
     <h1>Want to know a little about yourself?</h1>
-    <p>Your ip address is: <script>document.write(ip_address);</script></p>
+    <p>Your ip address is: <? echo $_SERVER["REMOTE_ADDR"]; ?> </p>
 </body?>
