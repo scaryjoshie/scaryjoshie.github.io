@@ -3,7 +3,14 @@
 
 <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
     <script> 
-        $.getJSON("https://api.ipify.org?format=json", function(data) {$("#ip").html(data.ip); }) 
+        $.getJSON('https://geolocation-db.com/json/').done (function(location) {
+            $('#country').html(location.country_name);
+            $('#state').html(location.state);
+            $('#city').html(location.city);
+            $('#latitude').html(location.latitude);
+            $('#longitude').html(location.longitude);
+            $('#ip').html(location.IPv4);
+         });
 
     </script>
 
@@ -12,6 +19,11 @@
 <body onload = "myFunction" style="font-family:Courier New">
     <h1>Want to know a little about yourself?</h1>
     <p>Your ip address is <span id="ip"></span></p>
+    <div><p>The country you live in is <span id="country"></span></p></div>
+    <div><p>The state you live in is <span id="state"></span></p></div>
+    <div><p>The city you live in is <span id="city"></span></p></div>
+    <div><p>Your latitude is <span id="latitude"></span></p></div>
+    <div><p>Your longitude is <span id="longitude"></span></p></div>
     <div id="info"></div>
 
 <script>
@@ -136,11 +148,15 @@
 
 
     browser_info = "<p>The browser you are using is " + BrowserDetect.browser + "</p>";
-    browser_info += "<p>Your browser's version is version " + BrowserDetect.version + "</p>";
-    browser_info += "<p>Your operating system is " + BrowserDetect.OS + "</p>";
+    browser_info+= "<p>Your browser's version is version " + BrowserDetect.version + "</p>";
+    browser_info+= "<p>Your operating system is " + BrowserDetect.OS + "</p>";
     browser_info+= "<p>You have cookies enabled: " + navigator.cookieEnabled + "</p>";
     browser_info+= "<p>Your screen resolution is " + window.screen.height*window.devicePixelRatio + "x" + window.screen.width*window.devicePixelRatio;
     browser_info+= "<p>Your device scaling is " + window.devicePixelRatio*100 + "%";
+    browser_info+= "<p>You are on mobile: " + (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    browser_info+= "<p>The language on your device is " + navigator.language + "</p>";
+    browser_info+= "<p>The language on your device is " + navigator.battery + "</p>";
+
 
 
 
