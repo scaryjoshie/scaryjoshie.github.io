@@ -1,6 +1,14 @@
 <html>
 </html>
 
+<style>
+    body {
+      background-image: url('hacker2.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+</style>
 
 <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
     <script> 
@@ -11,13 +19,13 @@
             $('#latitude').html(location.latitude);
             $('#longitude').html(location.longitude);
             $('#ip').html(location.IPv4);
-         });
+        });
     </script>
 
 
     <!-- Text-->
-<body onload = "myFunction" style="font-family:Courier New">
-    <h1>Want to know a little about yourself?</h1>
+<body onload = "myFunction" style="font-family:courier; color:greenyellow; font-size:20">
+    <h1 style="font-family:Lucida Console; font-size:40">Want to know a little about yourself?</h1>
     <p>Your ip address is <span id="ip"></span></p>
     <div><p>The country you live in is <span id="country"></span></p></div>
     <div><p>The state you live in is <span id="state"></span></p></div>
