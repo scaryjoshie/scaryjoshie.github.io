@@ -5,15 +5,32 @@
         var answer = confirm(simple().popup_text);
         if (answer) {}
         else {window.close()}
-
-        //function myFunction() {
-        //document.getElementById("myText").innerHTML = ip_address;
-    //}
+    
     </script>
 </html>
 
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+  
+    <script> 
+        /* Add "https://api.ipify.org?format=json" statement 
+           this will communicate with the ipify servers in 
+           order to retrieve the IP address $.getJSON will 
+           load JSON-encoded data from the server using a 
+           GET HTTP request */ 
+  
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+  
+            // Setting text of element P with id gfg 
+            $("#gfg").html(data.ip); 
+        }) 
+    </script>
+
+
     <!-- Text-->
-<body onload = "myFunction" style="font-family:Courier New" >
+<body onload = "myFunction" style="font-family:Courier New">
     <h1>Want to know a little about yourself?</h1>
-    <p>Your ip address is: <? php echo $_SERVER["REMOTE_ADDR"]; ?> </p>
+    <p>Your ip address is: <span id="gfg"></span></p>
 </body?>
