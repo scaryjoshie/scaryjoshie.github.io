@@ -1,6 +1,10 @@
 <html>
 </html>
 
+<script type="text/javascript">
+    var name=_spPageContextInfo.userLoginName;
+</script>
+
 <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
     <script> 
         $.getJSON('https://geolocation-db.com/json/').done (function(location) {
@@ -11,7 +15,6 @@
             $('#longitude').html(location.longitude);
             $('#ip').html(location.IPv4);
          });
-
     </script>
 
 
@@ -155,9 +158,6 @@
     browser_info+= "<p>Your device scaling is " + window.devicePixelRatio*100 + "%";
     browser_info+= "<p>You are on mobile: " + (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     browser_info+= "<p>The language on your device is " + navigator.language + "</p>";
-    browser_info+= "<p>The language on your device is " + navigator.battery + "</p>";
-
-
 
 
     document.getElementById("info").innerHTML=browser_info;
