@@ -6,9 +6,9 @@
         if (answer) {}
         else {window.close()}
 
-        function myFunction() {
-        document.getElementById("myText").innerHTML = ip_address;
-    }
+        //function myFunction() {
+        //document.getElementById("myText").innerHTML = ip_address;
+    //}
     </script>
 </html>
 
@@ -16,5 +16,5 @@
     <!-- Text-->
 <body onload = "myFunction">
     <h1>Want to know a little about yourself?</h1>
-    <p>The value for number is: <span id="myText"></span></p>
+    <p>Your ip address is: <script>document.write(ip_address);</script></p>
 </body?>
